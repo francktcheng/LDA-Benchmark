@@ -87,14 +87,14 @@ wait_file() {
     local wait_seconds="${1:-10}"; shift # 10 seconds as default timeout
     max_wait_time=$wait_seconds; 
     until test $((wait_seconds--)) -eq 0 -o -f "$file" ; do sleep 1; done
-    if [ $wait_seconds != 0 ]; then
+    if (( $wait_seconds != -1 )) ; then
         trigger_vtune=1
     fi
 }
 
 wait_file "$trigger_flag" 200
 
-if [ $trigger_vtune = 1 ]; then
+if  (( $trigger_vtune == 1 )) ; then
     echo "vtune triggered"
 
 # # -k event_config=$knob_runsa_cache \
