@@ -1,0 +1,73 @@
+Required Platform
+=================
+	- Linux 
+	- gcc-4.7 or above
+	- mpich2 with multiple thread enabled is required for distributed computation 
+
+Compilation
+===========
+	- Modify the compiler variables in Makefile adequately 
+	- Type the following command to build everything 
+		$ make # or 
+		$ make CXX=g++-4.7 MPICXX=mpicxx.mpich2 
+
+
+Dataset Preparation 
+===================
+	- See data/README for an example to prepare datasets 
+
+
+Usage of ``splda''
+==================
+	The purpose of ``splda'' is for the comparison of the serial implementation 
+	of various sampling techniques for LDA. 
+	The ``alpha'' is set to 50/nr_topics and ``beta'' is set to 0.01 in the code. 
+	Detailed usages is as follows. 
+
+	 $ ./splda nr_topics max_iterations data_dir solver
+	 solver: 0 = Normal LDA
+	 solver: 1 = Sparse LDA
+	 solver: 8 = Alias LDA
+	 solver: 9 = F+LDA - word-by-word
+	 solver: 10 = F+LDA - doc-by-doc
+	
+Usage of ``dist-lda-heap''
+	This program implements F+NOMAD-LDA algorithm. Note that you might need 
+	to set the environment variables by 
+		$ . tbb/tbbvars.sh 
+	to like the TBB library. The detailed usage is as follows. 
+
+	Usage: 
+		export MV2_ENABLE_AFFINITY=0
+		mpiexec -n 4 ./dist-lda-heap [options] data_dir [model_filename]
+	options:
+		-k nr_topics : set the number of topics (default 10)
+		-a alpha*k : set the Dirichlet prior for topics (default 50)
+		-b beta : set the Dirichlet prior for words (default 0.01)
+		-d delay : set the token-pass delay (default 10)
+		-n nr_samplers : set the number of samplers (default 4)
+		-t max_iter: set the number of iterations (default 5)
+		-T time_interval: set the interval between evaluations (default 5 sec)
+		-m max_tokens_per_msg: set the max tokens per message (default 20 tokens)
+		-p do_predict: do prediction or not (default 0)
+		-S nr_samples for perplexity computation (default 100)
+		-l sampler_schedule (default 0)
+		-L proc_schedule (default 0)
+			0 for load_balancing
+			1 for rand permutation
+			2 for cyclic
+			3 for pure rand
+		-q verbose: show information or not (default 0)
+
+Notes
+=====
+	- This code is for the reproducibility of the paper entitled 
+		A Scalable Asynchronous Distributed Algorithm for Topic Modeling,
+	  by Hsiang-Fu Yu, Cho-Jui Hsieh, Hyokun Yun, S.V.N Vishwanathan, and Inderjit S. Dhillon. 
+
+	- The code is under active development. It can change very frequently. If you have any questions or
+      find any bugs, please contact us. 
+
+
+
+	
