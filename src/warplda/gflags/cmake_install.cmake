@@ -1,4 +1,4 @@
-# Install script for directory: /tmp/hpda/test/profiling/src/warplda/gflags
+# Install script for directory: /scratch/fg474admin/LDA-langshi-Exp/ldaprofiling/src/warplda/gflags
 
 # Set the install prefix
 IF(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -33,35 +33,35 @@ IF(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
 ENDIF(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
 
 IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "/tmp/hpda/test/profiling/src/warplda/gflags/libgflags.a")
+  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "/scratch/fg474admin/LDA-langshi-Exp/ldaprofiling/src/warplda/gflags/libgflags.a")
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
 
 IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "/tmp/hpda/test/profiling/src/warplda/gflags/libgflags_nothreads.a")
+  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "/scratch/fg474admin/LDA-langshi-Exp/ldaprofiling/src/warplda/gflags/libgflags_nothreads.a")
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
 
 IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/gflags" TYPE FILE FILES
-    "/tmp/hpda/test/profiling/src/warplda/gflags/include/gflags/gflags.h"
-    "/tmp/hpda/test/profiling/src/warplda/gflags/include/gflags/gflags_declare.h"
-    "/tmp/hpda/test/profiling/src/warplda/gflags/include/gflags/gflags_completions.h"
-    "/tmp/hpda/test/profiling/src/warplda/gflags/include/gflags/gflags_gflags.h"
+    "/scratch/fg474admin/LDA-langshi-Exp/ldaprofiling/src/warplda/gflags/include/gflags/gflags.h"
+    "/scratch/fg474admin/LDA-langshi-Exp/ldaprofiling/src/warplda/gflags/include/gflags/gflags_declare.h"
+    "/scratch/fg474admin/LDA-langshi-Exp/ldaprofiling/src/warplda/gflags/include/gflags/gflags_completions.h"
+    "/scratch/fg474admin/LDA-langshi-Exp/ldaprofiling/src/warplda/gflags/include/gflags/gflags_gflags.h"
     )
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
 
 IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/gflags" TYPE FILE RENAME "gflags-config.cmake" FILES "/tmp/hpda/test/profiling/src/warplda/gflags/gflags-config-install.cmake")
+  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/gflags" TYPE FILE RENAME "gflags-config.cmake" FILES "/scratch/fg474admin/LDA-langshi-Exp/ldaprofiling/src/warplda/gflags/gflags-config-install.cmake")
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
 
 IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/gflags" TYPE FILE FILES "/tmp/hpda/test/profiling/src/warplda/gflags/gflags-config-version.cmake")
+  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/gflags" TYPE FILE FILES "/scratch/fg474admin/LDA-langshi-Exp/ldaprofiling/src/warplda/gflags/gflags-config-version.cmake")
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
 
 IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   IF(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/cmake/gflags/gflags-targets.cmake")
     FILE(DIFFERENT EXPORT_FILE_CHANGED FILES
          "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/cmake/gflags/gflags-targets.cmake"
-         "/tmp/hpda/test/profiling/src/warplda/gflags/CMakeFiles/Export/lib/cmake/gflags/gflags-targets.cmake")
+         "/scratch/fg474admin/LDA-langshi-Exp/ldaprofiling/src/warplda/gflags/CMakeFiles/Export/lib/cmake/gflags/gflags-targets.cmake")
     IF(EXPORT_FILE_CHANGED)
       FILE(GLOB OLD_CONFIG_FILES "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/cmake/gflags/gflags-targets-*.cmake")
       IF(OLD_CONFIG_FILES)
@@ -70,13 +70,13 @@ IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspeci
       ENDIF(OLD_CONFIG_FILES)
     ENDIF(EXPORT_FILE_CHANGED)
   ENDIF()
-  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/gflags" TYPE FILE FILES "/tmp/hpda/test/profiling/src/warplda/gflags/CMakeFiles/Export/lib/cmake/gflags/gflags-targets.cmake")
+  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/gflags" TYPE FILE FILES "/scratch/fg474admin/LDA-langshi-Exp/ldaprofiling/src/warplda/gflags/CMakeFiles/Export/lib/cmake/gflags/gflags-targets.cmake")
   IF("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^([Rr][Ee][Ll][Ee][Aa][Ss][Ee])$")
-    FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/gflags" TYPE FILE FILES "/tmp/hpda/test/profiling/src/warplda/gflags/CMakeFiles/Export/lib/cmake/gflags/gflags-targets-release.cmake")
+    FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/gflags" TYPE FILE FILES "/scratch/fg474admin/LDA-langshi-Exp/ldaprofiling/src/warplda/gflags/CMakeFiles/Export/lib/cmake/gflags/gflags-targets-release.cmake")
   ENDIF("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^([Rr][Ee][Ll][Ee][Aa][Ss][Ee])$")
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
 
 IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE PROGRAM FILES "/tmp/hpda/test/profiling/src/warplda/gflags/src/gflags_completions.sh")
+  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE PROGRAM FILES "/scratch/fg474admin/LDA-langshi-Exp/ldaprofiling/src/warplda/gflags/src/gflags_completions.sh")
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
 

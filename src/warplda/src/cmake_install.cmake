@@ -1,4 +1,4 @@
-# Install script for directory: /tmp/hpda/test/profiling/src/warplda/src
+# Install script for directory: /scratch/fg474admin/LDA-langshi-Exp/ldaprofiling/src/warplda/src
 
 # Set the install prefix
 IF(NOT DEFINED CMAKE_INSTALL_PREFIX)

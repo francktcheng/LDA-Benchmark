@@ -42,10 +42,10 @@ EQUALS = =
 CMAKE_EDIT_COMMAND = /usr/bin/ccmake
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /tmp/hpda/test/profiling/src/warplda
+CMAKE_SOURCE_DIR = /scratch/fg474admin/LDA-langshi-Exp/ldaprofiling/src/warplda
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /tmp/hpda/test/profiling/src/warplda
+CMAKE_BINARY_DIR = /scratch/fg474admin/LDA-langshi-Exp/ldaprofiling/src/warplda
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -123,14 +123,14 @@ test/fast: test
 
 # The main all target
 all: cmake_check_build_system
-	cd /tmp/hpda/test/profiling/src/warplda && $(CMAKE_COMMAND) -E cmake_progress_start /tmp/hpda/test/profiling/src/warplda/CMakeFiles /tmp/hpda/test/profiling/src/warplda/src/CMakeFiles/progress.marks
-	cd /tmp/hpda/test/profiling/src/warplda && $(MAKE) -f CMakeFiles/Makefile2 src/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /tmp/hpda/test/profiling/src/warplda/CMakeFiles 0
+	cd /scratch/fg474admin/LDA-langshi-Exp/ldaprofiling/src/warplda && $(CMAKE_COMMAND) -E cmake_progress_start /scratch/fg474admin/LDA-langshi-Exp/ldaprofiling/src/warplda/CMakeFiles /scratch/fg474admin/LDA-langshi-Exp/ldaprofiling/src/warplda/src/CMakeFiles/progress.marks
+	cd /scratch/fg474admin/LDA-langshi-Exp/ldaprofiling/src/warplda && $(MAKE) -f CMakeFiles/Makefile2 src/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /scratch/fg474admin/LDA-langshi-Exp/ldaprofiling/src/warplda/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /tmp/hpda/test/profiling/src/warplda && $(MAKE) -f CMakeFiles/Makefile2 src/clean
+	cd /scratch/fg474admin/LDA-langshi-Exp/ldaprofiling/src/warplda && $(MAKE) -f CMakeFiles/Makefile2 src/clean
 .PHONY : clean
 
 # The main clean target
@@ -139,22 +139,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /tmp/hpda/test/profiling/src/warplda && $(MAKE) -f CMakeFiles/Makefile2 src/preinstall
+	cd /scratch/fg474admin/LDA-langshi-Exp/ldaprofiling/src/warplda && $(MAKE) -f CMakeFiles/Makefile2 src/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /tmp/hpda/test/profiling/src/warplda && $(MAKE) -f CMakeFiles/Makefile2 src/preinstall
+	cd /scratch/fg474admin/LDA-langshi-Exp/ldaprofiling/src/warplda && $(MAKE) -f CMakeFiles/Makefile2 src/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /tmp/hpda/test/profiling/src/warplda && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /scratch/fg474admin/LDA-langshi-Exp/ldaprofiling/src/warplda && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 src/CMakeFiles/common.dir/rule:
-	cd /tmp/hpda/test/profiling/src/warplda && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/common.dir/rule
+	cd /scratch/fg474admin/LDA-langshi-Exp/ldaprofiling/src/warplda && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/common.dir/rule
 .PHONY : src/CMakeFiles/common.dir/rule
 
 # Convenience name for target.
@@ -163,12 +163,12 @@ common: src/CMakeFiles/common.dir/rule
 
 # fast build rule for target.
 common/fast:
-	cd /tmp/hpda/test/profiling/src/warplda && $(MAKE) -f src/CMakeFiles/common.dir/build.make src/CMakeFiles/common.dir/build
+	cd /scratch/fg474admin/LDA-langshi-Exp/ldaprofiling/src/warplda && $(MAKE) -f src/CMakeFiles/common.dir/build.make src/CMakeFiles/common.dir/build
 .PHONY : common/fast
 
 # Convenience name for target.
 src/CMakeFiles/format.dir/rule:
-	cd /tmp/hpda/test/profiling/src/warplda && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/format.dir/rule
+	cd /scratch/fg474admin/LDA-langshi-Exp/ldaprofiling/src/warplda && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/format.dir/rule
 .PHONY : src/CMakeFiles/format.dir/rule
 
 # Convenience name for target.
@@ -177,12 +177,12 @@ format: src/CMakeFiles/format.dir/rule
 
 # fast build rule for target.
 format/fast:
-	cd /tmp/hpda/test/profiling/src/warplda && $(MAKE) -f src/CMakeFiles/format.dir/build.make src/CMakeFiles/format.dir/build
+	cd /scratch/fg474admin/LDA-langshi-Exp/ldaprofiling/src/warplda && $(MAKE) -f src/CMakeFiles/format.dir/build.make src/CMakeFiles/format.dir/build
 .PHONY : format/fast
 
 # Convenience name for target.
 src/CMakeFiles/warplda.dir/rule:
-	cd /tmp/hpda/test/profiling/src/warplda && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/warplda.dir/rule
+	cd /scratch/fg474admin/LDA-langshi-Exp/ldaprofiling/src/warplda && $(MAKE) -f CMakeFiles/Makefile2 src/CMakeFiles/warplda.dir/rule
 .PHONY : src/CMakeFiles/warplda.dir/rule
 
 # Convenience name for target.
@@ -191,7 +191,7 @@ warplda: src/CMakeFiles/warplda.dir/rule
 
 # fast build rule for target.
 warplda/fast:
-	cd /tmp/hpda/test/profiling/src/warplda && $(MAKE) -f src/CMakeFiles/warplda.dir/build.make src/CMakeFiles/warplda.dir/build
+	cd /scratch/fg474admin/LDA-langshi-Exp/ldaprofiling/src/warplda && $(MAKE) -f src/CMakeFiles/warplda.dir/build.make src/CMakeFiles/warplda.dir/build
 .PHONY : warplda/fast
 
 AdjList.o: AdjList.cpp.o
@@ -199,7 +199,7 @@ AdjList.o: AdjList.cpp.o
 
 # target to build an object file
 AdjList.cpp.o:
-	cd /tmp/hpda/test/profiling/src/warplda && $(MAKE) -f src/CMakeFiles/common.dir/build.make src/CMakeFiles/common.dir/AdjList.cpp.o
+	cd /scratch/fg474admin/LDA-langshi-Exp/ldaprofiling/src/warplda && $(MAKE) -f src/CMakeFiles/common.dir/build.make src/CMakeFiles/common.dir/AdjList.cpp.o
 .PHONY : AdjList.cpp.o
 
 AdjList.i: AdjList.cpp.i
@@ -207,7 +207,7 @@ AdjList.i: AdjList.cpp.i
 
 # target to preprocess a source file
 AdjList.cpp.i:
-	cd /tmp/hpda/test/profiling/src/warplda && $(MAKE) -f src/CMakeFiles/common.dir/build.make src/CMakeFiles/common.dir/AdjList.cpp.i
+	cd /scratch/fg474admin/LDA-langshi-Exp/ldaprofiling/src/warplda && $(MAKE) -f src/CMakeFiles/common.dir/build.make src/CMakeFiles/common.dir/AdjList.cpp.i
 .PHONY : AdjList.cpp.i
 
 AdjList.s: AdjList.cpp.s
@@ -215,7 +215,7 @@ AdjList.s: AdjList.cpp.s
 
 # target to generate assembly for a file
 AdjList.cpp.s:
-	cd /tmp/hpda/test/profiling/src/warplda && $(MAKE) -f src/CMakeFiles/common.dir/build.make src/CMakeFiles/common.dir/AdjList.cpp.s
+	cd /scratch/fg474admin/LDA-langshi-Exp/ldaprofiling/src/warplda && $(MAKE) -f src/CMakeFiles/common.dir/build.make src/CMakeFiles/common.dir/AdjList.cpp.s
 .PHONY : AdjList.cpp.s
 
 Bigraph.o: Bigraph.cpp.o
@@ -223,7 +223,7 @@ Bigraph.o: Bigraph.cpp.o
 
 # target to build an object file
 Bigraph.cpp.o:
-	cd /tmp/hpda/test/profiling/src/warplda && $(MAKE) -f src/CMakeFiles/common.dir/build.make src/CMakeFiles/common.dir/Bigraph.cpp.o
+	cd /scratch/fg474admin/LDA-langshi-Exp/ldaprofiling/src/warplda && $(MAKE) -f src/CMakeFiles/common.dir/build.make src/CMakeFiles/common.dir/Bigraph.cpp.o
 .PHONY : Bigraph.cpp.o
 
 Bigraph.i: Bigraph.cpp.i
@@ -231,7 +231,7 @@ Bigraph.i: Bigraph.cpp.i
 
 # target to preprocess a source file
 Bigraph.cpp.i:
-	cd /tmp/hpda/test/profiling/src/warplda && $(MAKE) -f src/CMakeFiles/common.dir/build.make src/CMakeFiles/common.dir/Bigraph.cpp.i
+	cd /scratch/fg474admin/LDA-langshi-Exp/ldaprofiling/src/warplda && $(MAKE) -f src/CMakeFiles/common.dir/build.make src/CMakeFiles/common.dir/Bigraph.cpp.i
 .PHONY : Bigraph.cpp.i
 
 Bigraph.s: Bigraph.cpp.s
@@ -239,7 +239,7 @@ Bigraph.s: Bigraph.cpp.s
 
 # target to generate assembly for a file
 Bigraph.cpp.s:
-	cd /tmp/hpda/test/profiling/src/warplda && $(MAKE) -f src/CMakeFiles/common.dir/build.make src/CMakeFiles/common.dir/Bigraph.cpp.s
+	cd /scratch/fg474admin/LDA-langshi-Exp/ldaprofiling/src/warplda && $(MAKE) -f src/CMakeFiles/common.dir/build.make src/CMakeFiles/common.dir/Bigraph.cpp.s
 .PHONY : Bigraph.cpp.s
 
 NumaArray.o: NumaArray.cpp.o
@@ -247,7 +247,7 @@ NumaArray.o: NumaArray.cpp.o
 
 # target to build an object file
 NumaArray.cpp.o:
-	cd /tmp/hpda/test/profiling/src/warplda && $(MAKE) -f src/CMakeFiles/common.dir/build.make src/CMakeFiles/common.dir/NumaArray.cpp.o
+	cd /scratch/fg474admin/LDA-langshi-Exp/ldaprofiling/src/warplda && $(MAKE) -f src/CMakeFiles/common.dir/build.make src/CMakeFiles/common.dir/NumaArray.cpp.o
 .PHONY : NumaArray.cpp.o
 
 NumaArray.i: NumaArray.cpp.i
@@ -255,7 +255,7 @@ NumaArray.i: NumaArray.cpp.i
 
 # target to preprocess a source file
 NumaArray.cpp.i:
-	cd /tmp/hpda/test/profiling/src/warplda && $(MAKE) -f src/CMakeFiles/common.dir/build.make src/CMakeFiles/common.dir/NumaArray.cpp.i
+	cd /scratch/fg474admin/LDA-langshi-Exp/ldaprofiling/src/warplda && $(MAKE) -f src/CMakeFiles/common.dir/build.make src/CMakeFiles/common.dir/NumaArray.cpp.i
 .PHONY : NumaArray.cpp.i
 
 NumaArray.s: NumaArray.cpp.s
@@ -263,7 +263,7 @@ NumaArray.s: NumaArray.cpp.s
 
 # target to generate assembly for a file
 NumaArray.cpp.s:
-	cd /tmp/hpda/test/profiling/src/warplda && $(MAKE) -f src/CMakeFiles/common.dir/build.make src/CMakeFiles/common.dir/NumaArray.cpp.s
+	cd /scratch/fg474admin/LDA-langshi-Exp/ldaprofiling/src/warplda && $(MAKE) -f src/CMakeFiles/common.dir/build.make src/CMakeFiles/common.dir/NumaArray.cpp.s
 .PHONY : NumaArray.cpp.s
 
 Vocab.o: Vocab.cpp.o
@@ -271,7 +271,7 @@ Vocab.o: Vocab.cpp.o
 
 # target to build an object file
 Vocab.cpp.o:
-	cd /tmp/hpda/test/profiling/src/warplda && $(MAKE) -f src/CMakeFiles/common.dir/build.make src/CMakeFiles/common.dir/Vocab.cpp.o
+	cd /scratch/fg474admin/LDA-langshi-Exp/ldaprofiling/src/warplda && $(MAKE) -f src/CMakeFiles/common.dir/build.make src/CMakeFiles/common.dir/Vocab.cpp.o
 .PHONY : Vocab.cpp.o
 
 Vocab.i: Vocab.cpp.i
@@ -279,7 +279,7 @@ Vocab.i: Vocab.cpp.i
 
 # target to preprocess a source file
 Vocab.cpp.i:
-	cd /tmp/hpda/test/profiling/src/warplda && $(MAKE) -f src/CMakeFiles/common.dir/build.make src/CMakeFiles/common.dir/Vocab.cpp.i
+	cd /scratch/fg474admin/LDA-langshi-Exp/ldaprofiling/src/warplda && $(MAKE) -f src/CMakeFiles/common.dir/build.make src/CMakeFiles/common.dir/Vocab.cpp.i
 .PHONY : Vocab.cpp.i
 
 Vocab.s: Vocab.cpp.s
@@ -287,7 +287,7 @@ Vocab.s: Vocab.cpp.s
 
 # target to generate assembly for a file
 Vocab.cpp.s:
-	cd /tmp/hpda/test/profiling/src/warplda && $(MAKE) -f src/CMakeFiles/common.dir/build.make src/CMakeFiles/common.dir/Vocab.cpp.s
+	cd /scratch/fg474admin/LDA-langshi-Exp/ldaprofiling/src/warplda && $(MAKE) -f src/CMakeFiles/common.dir/build.make src/CMakeFiles/common.dir/Vocab.cpp.s
 .PHONY : Vocab.cpp.s
 
 clock.o: clock.cpp.o
@@ -295,7 +295,7 @@ clock.o: clock.cpp.o
 
 # target to build an object file
 clock.cpp.o:
-	cd /tmp/hpda/test/profiling/src/warplda && $(MAKE) -f src/CMakeFiles/common.dir/build.make src/CMakeFiles/common.dir/clock.cpp.o
+	cd /scratch/fg474admin/LDA-langshi-Exp/ldaprofiling/src/warplda && $(MAKE) -f src/CMakeFiles/common.dir/build.make src/CMakeFiles/common.dir/clock.cpp.o
 .PHONY : clock.cpp.o
 
 clock.i: clock.cpp.i
@@ -303,7 +303,7 @@ clock.i: clock.cpp.i
 
 # target to preprocess a source file
 clock.cpp.i:
-	cd /tmp/hpda/test/profiling/src/warplda && $(MAKE) -f src/CMakeFiles/common.dir/build.make src/CMakeFiles/common.dir/clock.cpp.i
+	cd /scratch/fg474admin/LDA-langshi-Exp/ldaprofiling/src/warplda && $(MAKE) -f src/CMakeFiles/common.dir/build.make src/CMakeFiles/common.dir/clock.cpp.i
 .PHONY : clock.cpp.i
 
 clock.s: clock.cpp.s
@@ -311,7 +311,7 @@ clock.s: clock.cpp.s
 
 # target to generate assembly for a file
 clock.cpp.s:
-	cd /tmp/hpda/test/profiling/src/warplda && $(MAKE) -f src/CMakeFiles/common.dir/build.make src/CMakeFiles/common.dir/clock.cpp.s
+	cd /scratch/fg474admin/LDA-langshi-Exp/ldaprofiling/src/warplda && $(MAKE) -f src/CMakeFiles/common.dir/build.make src/CMakeFiles/common.dir/clock.cpp.s
 .PHONY : clock.cpp.s
 
 format.o: format.cpp.o
@@ -319,7 +319,7 @@ format.o: format.cpp.o
 
 # target to build an object file
 format.cpp.o:
-	cd /tmp/hpda/test/profiling/src/warplda && $(MAKE) -f src/CMakeFiles/format.dir/build.make src/CMakeFiles/format.dir/format.cpp.o
+	cd /scratch/fg474admin/LDA-langshi-Exp/ldaprofiling/src/warplda && $(MAKE) -f src/CMakeFiles/format.dir/build.make src/CMakeFiles/format.dir/format.cpp.o
 .PHONY : format.cpp.o
 
 format.i: format.cpp.i
@@ -327,7 +327,7 @@ format.i: format.cpp.i
 
 # target to preprocess a source file
 format.cpp.i:
-	cd /tmp/hpda/test/profiling/src/warplda && $(MAKE) -f src/CMakeFiles/format.dir/build.make src/CMakeFiles/format.dir/format.cpp.i
+	cd /scratch/fg474admin/LDA-langshi-Exp/ldaprofiling/src/warplda && $(MAKE) -f src/CMakeFiles/format.dir/build.make src/CMakeFiles/format.dir/format.cpp.i
 .PHONY : format.cpp.i
 
 format.s: format.cpp.s
@@ -335,7 +335,7 @@ format.s: format.cpp.s
 
 # target to generate assembly for a file
 format.cpp.s:
-	cd /tmp/hpda/test/profiling/src/warplda && $(MAKE) -f src/CMakeFiles/format.dir/build.make src/CMakeFiles/format.dir/format.cpp.s
+	cd /scratch/fg474admin/LDA-langshi-Exp/ldaprofiling/src/warplda && $(MAKE) -f src/CMakeFiles/format.dir/build.make src/CMakeFiles/format.dir/format.cpp.s
 .PHONY : format.cpp.s
 
 lda.o: lda.cpp.o
@@ -343,7 +343,7 @@ lda.o: lda.cpp.o
 
 # target to build an object file
 lda.cpp.o:
-	cd /tmp/hpda/test/profiling/src/warplda && $(MAKE) -f src/CMakeFiles/warplda.dir/build.make src/CMakeFiles/warplda.dir/lda.cpp.o
+	cd /scratch/fg474admin/LDA-langshi-Exp/ldaprofiling/src/warplda && $(MAKE) -f src/CMakeFiles/warplda.dir/build.make src/CMakeFiles/warplda.dir/lda.cpp.o
 .PHONY : lda.cpp.o
 
 lda.i: lda.cpp.i
@@ -351,7 +351,7 @@ lda.i: lda.cpp.i
 
 # target to preprocess a source file
 lda.cpp.i:
-	cd /tmp/hpda/test/profiling/src/warplda && $(MAKE) -f src/CMakeFiles/warplda.dir/build.make src/CMakeFiles/warplda.dir/lda.cpp.i
+	cd /scratch/fg474admin/LDA-langshi-Exp/ldaprofiling/src/warplda && $(MAKE) -f src/CMakeFiles/warplda.dir/build.make src/CMakeFiles/warplda.dir/lda.cpp.i
 .PHONY : lda.cpp.i
 
 lda.s: lda.cpp.s
@@ -359,7 +359,7 @@ lda.s: lda.cpp.s
 
 # target to generate assembly for a file
 lda.cpp.s:
-	cd /tmp/hpda/test/profiling/src/warplda && $(MAKE) -f src/CMakeFiles/warplda.dir/build.make src/CMakeFiles/warplda.dir/lda.cpp.s
+	cd /scratch/fg474admin/LDA-langshi-Exp/ldaprofiling/src/warplda && $(MAKE) -f src/CMakeFiles/warplda.dir/build.make src/CMakeFiles/warplda.dir/lda.cpp.s
 .PHONY : lda.cpp.s
 
 main.o: main.cpp.o
@@ -367,7 +367,7 @@ main.o: main.cpp.o
 
 # target to build an object file
 main.cpp.o:
-	cd /tmp/hpda/test/profiling/src/warplda && $(MAKE) -f src/CMakeFiles/warplda.dir/build.make src/CMakeFiles/warplda.dir/main.cpp.o
+	cd /scratch/fg474admin/LDA-langshi-Exp/ldaprofiling/src/warplda && $(MAKE) -f src/CMakeFiles/warplda.dir/build.make src/CMakeFiles/warplda.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -375,7 +375,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	cd /tmp/hpda/test/profiling/src/warplda && $(MAKE) -f src/CMakeFiles/warplda.dir/build.make src/CMakeFiles/warplda.dir/main.cpp.i
+	cd /scratch/fg474admin/LDA-langshi-Exp/ldaprofiling/src/warplda && $(MAKE) -f src/CMakeFiles/warplda.dir/build.make src/CMakeFiles/warplda.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -383,7 +383,7 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	cd /tmp/hpda/test/profiling/src/warplda && $(MAKE) -f src/CMakeFiles/warplda.dir/build.make src/CMakeFiles/warplda.dir/main.cpp.s
+	cd /scratch/fg474admin/LDA-langshi-Exp/ldaprofiling/src/warplda && $(MAKE) -f src/CMakeFiles/warplda.dir/build.make src/CMakeFiles/warplda.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 warplda.o: warplda.cpp.o
@@ -391,7 +391,7 @@ warplda.o: warplda.cpp.o
 
 # target to build an object file
 warplda.cpp.o:
-	cd /tmp/hpda/test/profiling/src/warplda && $(MAKE) -f src/CMakeFiles/warplda.dir/build.make src/CMakeFiles/warplda.dir/warplda.cpp.o
+	cd /scratch/fg474admin/LDA-langshi-Exp/ldaprofiling/src/warplda && $(MAKE) -f src/CMakeFiles/warplda.dir/build.make src/CMakeFiles/warplda.dir/warplda.cpp.o
 .PHONY : warplda.cpp.o
 
 warplda.i: warplda.cpp.i
@@ -399,7 +399,7 @@ warplda.i: warplda.cpp.i
 
 # target to preprocess a source file
 warplda.cpp.i:
-	cd /tmp/hpda/test/profiling/src/warplda && $(MAKE) -f src/CMakeFiles/warplda.dir/build.make src/CMakeFiles/warplda.dir/warplda.cpp.i
+	cd /scratch/fg474admin/LDA-langshi-Exp/ldaprofiling/src/warplda && $(MAKE) -f src/CMakeFiles/warplda.dir/build.make src/CMakeFiles/warplda.dir/warplda.cpp.i
 .PHONY : warplda.cpp.i
 
 warplda.s: warplda.cpp.s
@@ -407,7 +407,7 @@ warplda.s: warplda.cpp.s
 
 # target to generate assembly for a file
 warplda.cpp.s:
-	cd /tmp/hpda/test/profiling/src/warplda && $(MAKE) -f src/CMakeFiles/warplda.dir/build.make src/CMakeFiles/warplda.dir/warplda.cpp.s
+	cd /scratch/fg474admin/LDA-langshi-Exp/ldaprofiling/src/warplda && $(MAKE) -f src/CMakeFiles/warplda.dir/build.make src/CMakeFiles/warplda.dir/warplda.cpp.s
 .PHONY : warplda.cpp.s
 
 # Help Target
@@ -464,6 +464,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /tmp/hpda/test/profiling/src/warplda && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /scratch/fg474admin/LDA-langshi-Exp/ldaprofiling/src/warplda && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

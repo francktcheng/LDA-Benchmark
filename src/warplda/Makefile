@@ -42,10 +42,10 @@ EQUALS = =
 CMAKE_EDIT_COMMAND = /usr/bin/ccmake
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /tmp/hpda/test/profiling/src/warplda
+CMAKE_SOURCE_DIR = /scratch/fg474admin/LDA-langshi-Exp/ldaprofiling/src/warplda
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /tmp/hpda/test/profiling/src/warplda
+CMAKE_BINARY_DIR = /scratch/fg474admin/LDA-langshi-Exp/ldaprofiling/src/warplda
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -123,9 +123,9 @@ test/fast: test
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /tmp/hpda/test/profiling/src/warplda/CMakeFiles /tmp/hpda/test/profiling/src/warplda/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /scratch/fg474admin/LDA-langshi-Exp/ldaprofiling/src/warplda/CMakeFiles /scratch/fg474admin/LDA-langshi-Exp/ldaprofiling/src/warplda/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /tmp/hpda/test/profiling/src/warplda/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /scratch/fg474admin/LDA-langshi-Exp/ldaprofiling/src/warplda/CMakeFiles 0
 .PHONY : all
 
 # The main clean target

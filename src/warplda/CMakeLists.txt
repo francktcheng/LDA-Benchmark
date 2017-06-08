@@ -5,7 +5,8 @@ project (gridlda)
 add_subdirectory(gflags)
 
 # set compiling flags
-set (CMAKE_CXX_FLAGS "-march=native -std=c++1y -Wall -I/N/u/pengb/share/include/ -g ${CMAKE_CXX_FLAGS}")
+# set (CMAKE_CXX_FLAGS "-march=native -std=c++1y -Wall -I/N/u/pengb/share/include/ -g ${CMAKE_CXX_FLAGS}")
+set (CMAKE_CXX_FLAGS "-DVTUNE_PROF -march=native -std=c++1y -Wall -I/N/u/pengb/share/include/ -g ${CMAKE_CXX_FLAGS}")
 set (CMAKE_EXE_LINKER_FLAGS "-L/N/u/pengb/share/lib ${CMAKE_EXE_LINKER_FLAGS}")
 
 find_package(OpenMP)

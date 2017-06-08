@@ -7,6 +7,13 @@
 #include <exception>
 #include <atomic>
 
+#ifdef VTUNE_PROF
+// to write trigger file for vtune profiling
+#include <iostream>
+#include <fstream>
+using namespace std;
+#endif
+
 const int LOAD_FACTOR = 4;
 
 template <unsigned MH>
@@ -283,6 +290,15 @@ void WarpLDA<MH>::estimate(int _K, float _alpha, float _beta, int _niter, int _p
 
     printf("StartNoeval: K=%d, alpha=%f, beta=%f, niter=%d\n",_K, _alpha, _beta, _niter);
 	fflush(stdout);
+
+#ifdef VTUNE_PROF
+    //write trigger file to disk and enable vtune
+    ofstream vtune_trigger;
+    vtune_trigger.open("vtune-flag.txt");
+    vtune_trigger << "Start training process and trigger vtune profiling.\n";
+    vtune_trigger.close();
+#endif
+
 	for (int i = 0; i < niter; i++)
     {
 		Clock clk;

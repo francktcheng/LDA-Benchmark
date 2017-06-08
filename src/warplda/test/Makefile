@@ -42,10 +42,10 @@ EQUALS = =
 CMAKE_EDIT_COMMAND = /usr/bin/ccmake
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /tmp/hpda/test/profiling/src/warplda
+CMAKE_SOURCE_DIR = /scratch/fg474admin/LDA-langshi-Exp/ldaprofiling/src/warplda
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /tmp/hpda/test/profiling/src/warplda
+CMAKE_BINARY_DIR = /scratch/fg474admin/LDA-langshi-Exp/ldaprofiling/src/warplda
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -123,14 +123,14 @@ test/fast: test
 
 # The main all target
 all: cmake_check_build_system
-	cd /tmp/hpda/test/profiling/src/warplda && $(CMAKE_COMMAND) -E cmake_progress_start /tmp/hpda/test/profiling/src/warplda/CMakeFiles /tmp/hpda/test/profiling/src/warplda/test/CMakeFiles/progress.marks
-	cd /tmp/hpda/test/profiling/src/warplda && $(MAKE) -f CMakeFiles/Makefile2 test/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /tmp/hpda/test/profiling/src/warplda/CMakeFiles 0
+	cd /scratch/fg474admin/LDA-langshi-Exp/ldaprofiling/src/warplda && $(CMAKE_COMMAND) -E cmake_progress_start /scratch/fg474admin/LDA-langshi-Exp/ldaprofiling/src/warplda/CMakeFiles /scratch/fg474admin/LDA-langshi-Exp/ldaprofiling/src/warplda/test/CMakeFiles/progress.marks
+	cd /scratch/fg474admin/LDA-langshi-Exp/ldaprofiling/src/warplda && $(MAKE) -f CMakeFiles/Makefile2 test/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /scratch/fg474admin/LDA-langshi-Exp/ldaprofiling/src/warplda/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /tmp/hpda/test/profiling/src/warplda && $(MAKE) -f CMakeFiles/Makefile2 test/clean
+	cd /scratch/fg474admin/LDA-langshi-Exp/ldaprofiling/src/warplda && $(MAKE) -f CMakeFiles/Makefile2 test/clean
 .PHONY : clean
 
 # The main clean target
@@ -139,22 +139,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /tmp/hpda/test/profiling/src/warplda && $(MAKE) -f CMakeFiles/Makefile2 test/preinstall
+	cd /scratch/fg474admin/LDA-langshi-Exp/ldaprofiling/src/warplda && $(MAKE) -f CMakeFiles/Makefile2 test/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /tmp/hpda/test/profiling/src/warplda && $(MAKE) -f CMakeFiles/Makefile2 test/preinstall
+	cd /scratch/fg474admin/LDA-langshi-Exp/ldaprofiling/src/warplda && $(MAKE) -f CMakeFiles/Makefile2 test/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /tmp/hpda/test/profiling/src/warplda && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /scratch/fg474admin/LDA-langshi-Exp/ldaprofiling/src/warplda && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 test/CMakeFiles/basic.dir/rule:
-	cd /tmp/hpda/test/profiling/src/warplda && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/basic.dir/rule
+	cd /scratch/fg474admin/LDA-langshi-Exp/ldaprofiling/src/warplda && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/basic.dir/rule
 .PHONY : test/CMakeFiles/basic.dir/rule
 
 # Convenience name for target.
@@ -163,7 +163,7 @@ basic: test/CMakeFiles/basic.dir/rule
 
 # fast build rule for target.
 basic/fast:
-	cd /tmp/hpda/test/profiling/src/warplda && $(MAKE) -f test/CMakeFiles/basic.dir/build.make test/CMakeFiles/basic.dir/build
+	cd /scratch/fg474admin/LDA-langshi-Exp/ldaprofiling/src/warplda && $(MAKE) -f test/CMakeFiles/basic.dir/build.make test/CMakeFiles/basic.dir/build
 .PHONY : basic/fast
 
 basic.o: basic.cpp.o
@@ -171,7 +171,7 @@ basic.o: basic.cpp.o
 
 # target to build an object file
 basic.cpp.o:
-	cd /tmp/hpda/test/profiling/src/warplda && $(MAKE) -f test/CMakeFiles/basic.dir/build.make test/CMakeFiles/basic.dir/basic.cpp.o
+	cd /scratch/fg474admin/LDA-langshi-Exp/ldaprofiling/src/warplda && $(MAKE) -f test/CMakeFiles/basic.dir/build.make test/CMakeFiles/basic.dir/basic.cpp.o
 .PHONY : basic.cpp.o
 
 basic.i: basic.cpp.i
@@ -179,7 +179,7 @@ basic.i: basic.cpp.i
 
 # target to preprocess a source file
 basic.cpp.i:
-	cd /tmp/hpda/test/profiling/src/warplda && $(MAKE) -f test/CMakeFiles/basic.dir/build.make test/CMakeFiles/basic.dir/basic.cpp.i
+	cd /scratch/fg474admin/LDA-langshi-Exp/ldaprofiling/src/warplda && $(MAKE) -f test/CMakeFiles/basic.dir/build.make test/CMakeFiles/basic.dir/basic.cpp.i
 .PHONY : basic.cpp.i
 
 basic.s: basic.cpp.s
@@ -187,7 +187,7 @@ basic.s: basic.cpp.s
 
 # target to generate assembly for a file
 basic.cpp.s:
-	cd /tmp/hpda/test/profiling/src/warplda && $(MAKE) -f test/CMakeFiles/basic.dir/build.make test/CMakeFiles/basic.dir/basic.cpp.s
+	cd /scratch/fg474admin/LDA-langshi-Exp/ldaprofiling/src/warplda && $(MAKE) -f test/CMakeFiles/basic.dir/build.make test/CMakeFiles/basic.dir/basic.cpp.s
 .PHONY : basic.cpp.s
 
 # Help Target
@@ -218,6 +218,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /tmp/hpda/test/profiling/src/warplda && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /scratch/fg474admin/LDA-langshi-Exp/ldaprofiling/src/warplda && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

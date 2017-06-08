@@ -42,10 +42,10 @@ EQUALS = =
 CMAKE_EDIT_COMMAND = /usr/bin/ccmake
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /tmp/hpda/test/profiling/src/warplda
+CMAKE_SOURCE_DIR = /scratch/fg474admin/LDA-langshi-Exp/ldaprofiling/src/warplda
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /tmp/hpda/test/profiling/src/warplda
+CMAKE_BINARY_DIR = /scratch/fg474admin/LDA-langshi-Exp/ldaprofiling/src/warplda
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -123,14 +123,14 @@ test/fast: test
 
 # The main all target
 all: cmake_check_build_system
-	cd /tmp/hpda/test/profiling/src/warplda && $(CMAKE_COMMAND) -E cmake_progress_start /tmp/hpda/test/profiling/src/warplda/CMakeFiles /tmp/hpda/test/profiling/src/warplda/gflags/CMakeFiles/progress.marks
-	cd /tmp/hpda/test/profiling/src/warplda && $(MAKE) -f CMakeFiles/Makefile2 gflags/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /tmp/hpda/test/profiling/src/warplda/CMakeFiles 0
+	cd /scratch/fg474admin/LDA-langshi-Exp/ldaprofiling/src/warplda && $(CMAKE_COMMAND) -E cmake_progress_start /scratch/fg474admin/LDA-langshi-Exp/ldaprofiling/src/warplda/CMakeFiles /scratch/fg474admin/LDA-langshi-Exp/ldaprofiling/src/warplda/gflags/CMakeFiles/progress.marks
+	cd /scratch/fg474admin/LDA-langshi-Exp/ldaprofiling/src/warplda && $(MAKE) -f CMakeFiles/Makefile2 gflags/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /scratch/fg474admin/LDA-langshi-Exp/ldaprofiling/src/warplda/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /tmp/hpda/test/profiling/src/warplda && $(MAKE) -f CMakeFiles/Makefile2 gflags/clean
+	cd /scratch/fg474admin/LDA-langshi-Exp/ldaprofiling/src/warplda && $(MAKE) -f CMakeFiles/Makefile2 gflags/clean
 .PHONY : clean
 
 # The main clean target
@@ -139,22 +139,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /tmp/hpda/test/profiling/src/warplda && $(MAKE) -f CMakeFiles/Makefile2 gflags/preinstall
+	cd /scratch/fg474admin/LDA-langshi-Exp/ldaprofiling/src/warplda && $(MAKE) -f CMakeFiles/Makefile2 gflags/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /tmp/hpda/test/profiling/src/warplda && $(MAKE) -f CMakeFiles/Makefile2 gflags/preinstall
+	cd /scratch/fg474admin/LDA-langshi-Exp/ldaprofiling/src/warplda && $(MAKE) -f CMakeFiles/Makefile2 gflags/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /tmp/hpda/test/profiling/src/warplda && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /scratch/fg474admin/LDA-langshi-Exp/ldaprofiling/src/warplda && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 gflags/CMakeFiles/gflags_nothreads_static.dir/rule:
-	cd /tmp/hpda/test/profiling/src/warplda && $(MAKE) -f CMakeFiles/Makefile2 gflags/CMakeFiles/gflags_nothreads_static.dir/rule
+	cd /scratch/fg474admin/LDA-langshi-Exp/ldaprofiling/src/warplda && $(MAKE) -f CMakeFiles/Makefile2 gflags/CMakeFiles/gflags_nothreads_static.dir/rule
 .PHONY : gflags/CMakeFiles/gflags_nothreads_static.dir/rule
 
 # Convenience name for target.
@@ -163,12 +163,12 @@ gflags_nothreads_static: gflags/CMakeFiles/gflags_nothreads_static.dir/rule
 
 # fast build rule for target.
 gflags_nothreads_static/fast:
-	cd /tmp/hpda/test/profiling/src/warplda && $(MAKE) -f gflags/CMakeFiles/gflags_nothreads_static.dir/build.make gflags/CMakeFiles/gflags_nothreads_static.dir/build
+	cd /scratch/fg474admin/LDA-langshi-Exp/ldaprofiling/src/warplda && $(MAKE) -f gflags/CMakeFiles/gflags_nothreads_static.dir/build.make gflags/CMakeFiles/gflags_nothreads_static.dir/build
 .PHONY : gflags_nothreads_static/fast
 
 # Convenience name for target.
 gflags/CMakeFiles/gflags_static.dir/rule:
-	cd /tmp/hpda/test/profiling/src/warplda && $(MAKE) -f CMakeFiles/Makefile2 gflags/CMakeFiles/gflags_static.dir/rule
+	cd /scratch/fg474admin/LDA-langshi-Exp/ldaprofiling/src/warplda && $(MAKE) -f CMakeFiles/Makefile2 gflags/CMakeFiles/gflags_static.dir/rule
 .PHONY : gflags/CMakeFiles/gflags_static.dir/rule
 
 # Convenience name for target.
@@ -177,7 +177,7 @@ gflags_static: gflags/CMakeFiles/gflags_static.dir/rule
 
 # fast build rule for target.
 gflags_static/fast:
-	cd /tmp/hpda/test/profiling/src/warplda && $(MAKE) -f gflags/CMakeFiles/gflags_static.dir/build.make gflags/CMakeFiles/gflags_static.dir/build
+	cd /scratch/fg474admin/LDA-langshi-Exp/ldaprofiling/src/warplda && $(MAKE) -f gflags/CMakeFiles/gflags_static.dir/build.make gflags/CMakeFiles/gflags_static.dir/build
 .PHONY : gflags_static/fast
 
 src/gflags.o: src/gflags.cc.o
@@ -185,8 +185,8 @@ src/gflags.o: src/gflags.cc.o
 
 # target to build an object file
 src/gflags.cc.o:
-	cd /tmp/hpda/test/profiling/src/warplda && $(MAKE) -f gflags/CMakeFiles/gflags_nothreads_static.dir/build.make gflags/CMakeFiles/gflags_nothreads_static.dir/src/gflags.cc.o
-	cd /tmp/hpda/test/profiling/src/warplda && $(MAKE) -f gflags/CMakeFiles/gflags_static.dir/build.make gflags/CMakeFiles/gflags_static.dir/src/gflags.cc.o
+	cd /scratch/fg474admin/LDA-langshi-Exp/ldaprofiling/src/warplda && $(MAKE) -f gflags/CMakeFiles/gflags_nothreads_static.dir/build.make gflags/CMakeFiles/gflags_nothreads_static.dir/src/gflags.cc.o
+	cd /scratch/fg474admin/LDA-langshi-Exp/ldaprofiling/src/warplda && $(MAKE) -f gflags/CMakeFiles/gflags_static.dir/build.make gflags/CMakeFiles/gflags_static.dir/src/gflags.cc.o
 .PHONY : src/gflags.cc.o
 
 src/gflags.i: src/gflags.cc.i
@@ -194,8 +194,8 @@ src/gflags.i: src/gflags.cc.i
 
 # target to preprocess a source file
 src/gflags.cc.i:
-	cd /tmp/hpda/test/profiling/src/warplda && $(MAKE) -f gflags/CMakeFiles/gflags_nothreads_static.dir/build.make gflags/CMakeFiles/gflags_nothreads_static.dir/src/gflags.cc.i
-	cd /tmp/hpda/test/profiling/src/warplda && $(MAKE) -f gflags/CMakeFiles/gflags_static.dir/build.make gflags/CMakeFiles/gflags_static.dir/src/gflags.cc.i
+	cd /scratch/fg474admin/LDA-langshi-Exp/ldaprofiling/src/warplda && $(MAKE) -f gflags/CMakeFiles/gflags_nothreads_static.dir/build.make gflags/CMakeFiles/gflags_nothreads_static.dir/src/gflags.cc.i
+	cd /scratch/fg474admin/LDA-langshi-Exp/ldaprofiling/src/warplda && $(MAKE) -f gflags/CMakeFiles/gflags_static.dir/build.make gflags/CMakeFiles/gflags_static.dir/src/gflags.cc.i
 .PHONY : src/gflags.cc.i
 
 src/gflags.s: src/gflags.cc.s
@@ -203,8 +203,8 @@ src/gflags.s: src/gflags.cc.s
 
 # target to generate assembly for a file
 src/gflags.cc.s:
-	cd /tmp/hpda/test/profiling/src/warplda && $(MAKE) -f gflags/CMakeFiles/gflags_nothreads_static.dir/build.make gflags/CMakeFiles/gflags_nothreads_static.dir/src/gflags.cc.s
-	cd /tmp/hpda/test/profiling/src/warplda && $(MAKE) -f gflags/CMakeFiles/gflags_static.dir/build.make gflags/CMakeFiles/gflags_static.dir/src/gflags.cc.s
+	cd /scratch/fg474admin/LDA-langshi-Exp/ldaprofiling/src/warplda && $(MAKE) -f gflags/CMakeFiles/gflags_nothreads_static.dir/build.make gflags/CMakeFiles/gflags_nothreads_static.dir/src/gflags.cc.s
+	cd /scratch/fg474admin/LDA-langshi-Exp/ldaprofiling/src/warplda && $(MAKE) -f gflags/CMakeFiles/gflags_static.dir/build.make gflags/CMakeFiles/gflags_static.dir/src/gflags.cc.s
 .PHONY : src/gflags.cc.s
 
 src/gflags_completions.o: src/gflags_completions.cc.o
@@ -212,8 +212,8 @@ src/gflags_completions.o: src/gflags_completions.cc.o
 
 # target to build an object file
 src/gflags_completions.cc.o:
-	cd /tmp/hpda/test/profiling/src/warplda && $(MAKE) -f gflags/CMakeFiles/gflags_nothreads_static.dir/build.make gflags/CMakeFiles/gflags_nothreads_static.dir/src/gflags_completions.cc.o
-	cd /tmp/hpda/test/profiling/src/warplda && $(MAKE) -f gflags/CMakeFiles/gflags_static.dir/build.make gflags/CMakeFiles/gflags_static.dir/src/gflags_completions.cc.o
+	cd /scratch/fg474admin/LDA-langshi-Exp/ldaprofiling/src/warplda && $(MAKE) -f gflags/CMakeFiles/gflags_nothreads_static.dir/build.make gflags/CMakeFiles/gflags_nothreads_static.dir/src/gflags_completions.cc.o
+	cd /scratch/fg474admin/LDA-langshi-Exp/ldaprofiling/src/warplda && $(MAKE) -f gflags/CMakeFiles/gflags_static.dir/build.make gflags/CMakeFiles/gflags_static.dir/src/gflags_completions.cc.o
 .PHONY : src/gflags_completions.cc.o
 
 src/gflags_completions.i: src/gflags_completions.cc.i
@@ -221,8 +221,8 @@ src/gflags_completions.i: src/gflags_completions.cc.i
 
 # target to preprocess a source file
 src/gflags_completions.cc.i:
-	cd /tmp/hpda/test/profiling/src/warplda && $(MAKE) -f gflags/CMakeFiles/gflags_nothreads_static.dir/build.make gflags/CMakeFiles/gflags_nothreads_static.dir/src/gflags_completions.cc.i
-	cd /tmp/hpda/test/profiling/src/warplda && $(MAKE) -f gflags/CMakeFiles/gflags_static.dir/build.make gflags/CMakeFiles/gflags_static.dir/src/gflags_completions.cc.i
+	cd /scratch/fg474admin/LDA-langshi-Exp/ldaprofiling/src/warplda && $(MAKE) -f gflags/CMakeFiles/gflags_nothreads_static.dir/build.make gflags/CMakeFiles/gflags_nothreads_static.dir/src/gflags_completions.cc.i
+	cd /scratch/fg474admin/LDA-langshi-Exp/ldaprofiling/src/warplda && $(MAKE) -f gflags/CMakeFiles/gflags_static.dir/build.make gflags/CMakeFiles/gflags_static.dir/src/gflags_completions.cc.i
 .PHONY : src/gflags_completions.cc.i
 
 src/gflags_completions.s: src/gflags_completions.cc.s
@@ -230,8 +230,8 @@ src/gflags_completions.s: src/gflags_completions.cc.s
 
 # target to generate assembly for a file
 src/gflags_completions.cc.s:
-	cd /tmp/hpda/test/profiling/src/warplda && $(MAKE) -f gflags/CMakeFiles/gflags_nothreads_static.dir/build.make gflags/CMakeFiles/gflags_nothreads_static.dir/src/gflags_completions.cc.s
-	cd /tmp/hpda/test/profiling/src/warplda && $(MAKE) -f gflags/CMakeFiles/gflags_static.dir/build.make gflags/CMakeFiles/gflags_static.dir/src/gflags_completions.cc.s
+	cd /scratch/fg474admin/LDA-langshi-Exp/ldaprofiling/src/warplda && $(MAKE) -f gflags/CMakeFiles/gflags_nothreads_static.dir/build.make gflags/CMakeFiles/gflags_nothreads_static.dir/src/gflags_completions.cc.s
+	cd /scratch/fg474admin/LDA-langshi-Exp/ldaprofiling/src/warplda && $(MAKE) -f gflags/CMakeFiles/gflags_static.dir/build.make gflags/CMakeFiles/gflags_static.dir/src/gflags_completions.cc.s
 .PHONY : src/gflags_completions.cc.s
 
 src/gflags_reporting.o: src/gflags_reporting.cc.o
@@ -239,8 +239,8 @@ src/gflags_reporting.o: src/gflags_reporting.cc.o
 
 # target to build an object file
 src/gflags_reporting.cc.o:
-	cd /tmp/hpda/test/profiling/src/warplda && $(MAKE) -f gflags/CMakeFiles/gflags_nothreads_static.dir/build.make gflags/CMakeFiles/gflags_nothreads_static.dir/src/gflags_reporting.cc.o
-	cd /tmp/hpda/test/profiling/src/warplda && $(MAKE) -f gflags/CMakeFiles/gflags_static.dir/build.make gflags/CMakeFiles/gflags_static.dir/src/gflags_reporting.cc.o
+	cd /scratch/fg474admin/LDA-langshi-Exp/ldaprofiling/src/warplda && $(MAKE) -f gflags/CMakeFiles/gflags_nothreads_static.dir/build.make gflags/CMakeFiles/gflags_nothreads_static.dir/src/gflags_reporting.cc.o
+	cd /scratch/fg474admin/LDA-langshi-Exp/ldaprofiling/src/warplda && $(MAKE) -f gflags/CMakeFiles/gflags_static.dir/build.make gflags/CMakeFiles/gflags_static.dir/src/gflags_reporting.cc.o
 .PHONY : src/gflags_reporting.cc.o
 
 src/gflags_reporting.i: src/gflags_reporting.cc.i
@@ -248,8 +248,8 @@ src/gflags_reporting.i: src/gflags_reporting.cc.i
 
 # target to preprocess a source file
 src/gflags_reporting.cc.i:
-	cd /tmp/hpda/test/profiling/src/warplda && $(MAKE) -f gflags/CMakeFiles/gflags_nothreads_static.dir/build.make gflags/CMakeFiles/gflags_nothreads_static.dir/src/gflags_reporting.cc.i
-	cd /tmp/hpda/test/profiling/src/warplda && $(MAKE) -f gflags/CMakeFiles/gflags_static.dir/build.make gflags/CMakeFiles/gflags_static.dir/src/gflags_reporting.cc.i
+	cd /scratch/fg474admin/LDA-langshi-Exp/ldaprofiling/src/warplda && $(MAKE) -f gflags/CMakeFiles/gflags_nothreads_static.dir/build.make gflags/CMakeFiles/gflags_nothreads_static.dir/src/gflags_reporting.cc.i
+	cd /scratch/fg474admin/LDA-langshi-Exp/ldaprofiling/src/warplda && $(MAKE) -f gflags/CMakeFiles/gflags_static.dir/build.make gflags/CMakeFiles/gflags_static.dir/src/gflags_reporting.cc.i
 .PHONY : src/gflags_reporting.cc.i
 
 src/gflags_reporting.s: src/gflags_reporting.cc.s
@@ -257,8 +257,8 @@ src/gflags_reporting.s: src/gflags_reporting.cc.s
 
 # target to generate assembly for a file
 src/gflags_reporting.cc.s:
-	cd /tmp/hpda/test/profiling/src/warplda && $(MAKE) -f gflags/CMakeFiles/gflags_nothreads_static.dir/build.make gflags/CMakeFiles/gflags_nothreads_static.dir/src/gflags_reporting.cc.s
-	cd /tmp/hpda/test/profiling/src/warplda && $(MAKE) -f gflags/CMakeFiles/gflags_static.dir/build.make gflags/CMakeFiles/gflags_static.dir/src/gflags_reporting.cc.s
+	cd /scratch/fg474admin/LDA-langshi-Exp/ldaprofiling/src/warplda && $(MAKE) -f gflags/CMakeFiles/gflags_nothreads_static.dir/build.make gflags/CMakeFiles/gflags_nothreads_static.dir/src/gflags_reporting.cc.s
+	cd /scratch/fg474admin/LDA-langshi-Exp/ldaprofiling/src/warplda && $(MAKE) -f gflags/CMakeFiles/gflags_static.dir/build.make gflags/CMakeFiles/gflags_static.dir/src/gflags_reporting.cc.s
 .PHONY : src/gflags_reporting.cc.s
 
 # Help Target
@@ -296,6 +296,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /tmp/hpda/test/profiling/src/warplda && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /scratch/fg474admin/LDA-langshi-Exp/ldaprofiling/src/warplda && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

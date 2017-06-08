@@ -42,7 +42,7 @@ unset(_expectedTargets)
 add_library(gflags_static STATIC IMPORTED)
 
 set_target_properties(gflags_static PROPERTIES
-  INTERFACE_INCLUDE_DIRECTORIES "/tmp/hpda/test/profiling/src/warplda/gflags/include"
+  INTERFACE_INCLUDE_DIRECTORIES "/scratch/fg474admin/LDA-langshi-Exp/ldaprofiling/src/warplda/gflags/include"
   INTERFACE_LINK_LIBRARIES "-lpthread"
 )
 
@@ -50,20 +50,20 @@ set_target_properties(gflags_static PROPERTIES
 add_library(gflags_nothreads_static STATIC IMPORTED)
 
 set_target_properties(gflags_nothreads_static PROPERTIES
-  INTERFACE_INCLUDE_DIRECTORIES "/tmp/hpda/test/profiling/src/warplda/gflags/include"
+  INTERFACE_INCLUDE_DIRECTORIES "/scratch/fg474admin/LDA-langshi-Exp/ldaprofiling/src/warplda/gflags/include"
 )
 
 # Import target "gflags_static" for configuration "Release"
 set_property(TARGET gflags_static APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(gflags_static PROPERTIES
   IMPORTED_LINK_INTERFACE_LANGUAGES_RELEASE "CXX"
-  IMPORTED_LOCATION_RELEASE "/tmp/hpda/test/profiling/src/warplda/gflags/libgflags.a"
+  IMPORTED_LOCATION_RELEASE "/scratch/fg474admin/LDA-langshi-Exp/ldaprofiling/src/warplda/gflags/libgflags.a"
   )
 
 # Import target "gflags_nothreads_static" for configuration "Release"
 set_property(TARGET gflags_nothreads_static APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(gflags_nothreads_static PROPERTIES
-  IMPORTED_LOCATION_RELEASE "/tmp/hpda/test/profiling/src/warplda/gflags/libgflags_nothreads.a"
+  IMPORTED_LOCATION_RELEASE "/scratch/fg474admin/LDA-langshi-Exp/ldaprofiling/src/warplda/gflags/libgflags_nothreads.a"
   )
 
 # This file does not depend on other imported targets which have
