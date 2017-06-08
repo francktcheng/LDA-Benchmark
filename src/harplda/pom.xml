@@ -13,6 +13,7 @@
         <module>harp-app</module>
         <module>harp-app-nothreadlog</module>
         <module>harp-app-noeval</module>
+        <module>harp-app-repeatsubmission</module>
     </modules>
 
     <dependencyManagement>

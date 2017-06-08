@@ -59,7 +59,7 @@ public class LDALauncher extends Configured
           + "<max training percentage> "
           + "<num of mappers> <num of threads per worker> <schedule ratio> "
           + "<memory (MB)> "
-          + "<work dir> <print model>");
+          + "<work dir> <print model> <max submission");
       return -1;
     }
     String docDirPath = args[0];
@@ -78,6 +78,8 @@ public class LDALauncher extends Configured
     String workDirPath = args[11];
     boolean printModel =
       Boolean.parseBoolean(args[12]);
+    int maxSubmission = Integer.parseInt(args[13]);
+
     System.out.println(
       "Number of Mappers = " + numMapTasks);
     if (numIteration <= 0) {
@@ -87,7 +89,7 @@ public class LDALauncher extends Configured
       return -1;
     }
     launch(docDirPath, numTopics, alpha, beta,
-      numIteration, minBound, maxBound,
+      numIteration, minBound, maxBound,maxSubmission,
       numMapTasks, numThreadsPerWorker,
       scheduleRatio, mem, workDirPath,
       printModel);
@@ -97,6 +99,7 @@ public class LDALauncher extends Configured
   private void launch(String docDirPath,
     int numTopics, double alpha, double beta,
     int numIterations, int minBound, int maxBound,
+    int maxSubmission,
     int numMapTasks, int numThreadsPerWorker,
     double scheduleRatio, int mem,
     String workDirPath, boolean printModel)
@@ -120,6 +123,7 @@ public class LDALauncher extends Configured
     long startTime = System.currentTimeMillis();
     runLDA(docDir, numTopics, alpha, beta,
       numIterations, minBound, maxBound,
+      maxSubmission,
       numMapTasks, numThreadsPerWorker,
       scheduleRatio, mem, printModel, modelDir,
       outputDir, configuration);
@@ -131,7 +135,8 @@ public class LDALauncher extends Configured
 
   private void runLDA(Path docDir, int numTopics,
     double alpha, double beta, int numIterations,
-    int minBound, int maxBound, int numMapTasks,
+    int minBound, int maxBound, int maxSubmission,
+    int numMapTasks,
     int numThreadsPerWorker, double scheduleRatio,
     int mem, boolean printModel, Path modelDir,
     Path outputDir, Configuration configuration)
@@ -149,6 +154,7 @@ public class LDALauncher extends Configured
     Job ldaJob =
       configureLDAJob(docDir, numTopics, alpha,
         beta, numIterations, minBound, maxBound,
+        maxSubmission,
         numMapTasks, numThreadsPerWorker,
         scheduleRatio, mem, printModel, modelDir,
         outputDir, configuration, jobID);
@@ -175,6 +181,7 @@ public class LDALauncher extends Configured
   private Job configureLDAJob(Path docDir,
     int numTopics, double alpha, double beta,
     int numIterations, int minBound, int maxBound,
+    int maxSubmission,
     int numMapTasks, int numThreadsPerWorker,
     double scheduleRatio, int mem,
     boolean printModel, Path modelDir,
@@ -192,6 +199,8 @@ public class LDALauncher extends Configured
       minBound);
     configuration.setInt(Constants.MAX_BOUND,
       maxBound);
+    configuration.setInt(Constants.MAX_SUBMISSION,
+      maxSubmission);
     configuration.setInt(Constants.NUM_THREADS,
       numThreadsPerWorker);
     configuration.setDouble(

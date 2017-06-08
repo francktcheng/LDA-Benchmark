@@ -60,6 +60,7 @@ public class LDAMPCollectiveMapper extends
   private boolean enableTuning;
   private int minBound;
   private int maxBound;
+  private int maxSubmission;
   private long time;
   private boolean hasOverTrained;
   private int lastUnderTrainIte;
@@ -102,21 +103,30 @@ public class LDAMPCollectiveMapper extends
     maxBound =
       configuration.getInt(Constants.MAX_BOUND,
         Constants.TRAIN_MAX_THRESHOLD);
-    if (minBound <= 0 || minBound > 100) {
-      minBound = Constants.TRAIN_MIN_THRESHOLD;
+    maxSubmission = 
+      configuration.getInt(Constants.MAX_SUBMISSION,
+        1);
+ 
+    //
+    //MAXSUBMISSION = 2 , means [0-200]
+    //
+    if (minBound <= 0 || minBound > 100*maxSubmission) {
+      minBound = Constants.TRAIN_MIN_THRESHOLD*maxSubmission;
     }
-    if (maxBound <= 0 || maxBound > 100) {
-      maxBound = Constants.TRAIN_MAX_THRESHOLD;
+    if (maxBound <= 0 || maxBound > 100*maxSubmission) {
+      maxBound = Constants.TRAIN_MAX_THRESHOLD*maxSubmission;
     }
     if (maxBound < minBound) {
       maxBound = minBound;
     }
-    if (maxBound == 100) {
-      minBound = 100;
+    if (maxBound == 100*maxSubmission) {
+      minBound = 100*maxSubmission;
       enableTuning = false;
     } else {
       enableTuning = true;
     }
+ 
+
     time = enableTuning ? 1000L : 1000000000L;
     hasOverTrained = false;
     lastUnderTrainIte = 0;
@@ -270,7 +280,7 @@ public class LDAMPCollectiveMapper extends
     }
     Scheduler<Int2ObjectOpenHashMap<DocWord>, TopicCountList, LDAMPTask> scheduler =
       new Scheduler<>(numRowSplits, numColSplits,
-        vDWMap, time, ldaTasks);
+        vDWMap, time , ldaTasks,maxSubmission );
     // -----------------------------------------
     // For iteration
     for (int i = 1; i <= numIterations; i++) {

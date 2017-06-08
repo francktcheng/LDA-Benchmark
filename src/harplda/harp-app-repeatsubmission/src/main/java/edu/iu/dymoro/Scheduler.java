@@ -43,7 +43,13 @@ public class Scheduler<D, S extends Simple, T extends MPTask<D, S>> {
   private final int numColLimit;
   private final int[] freeCol;
   private int numFreeCols;
-  private final boolean[][] submissionMap;
+  //
+  // this is a simple solution to make upperbound of timer exceed 100
+  //
+  //private final boolean[][] submissionMap;
+  private final int[][] submissionMap;
+  private int MAXSUBMISSION = 2;
+
   private final RowColSplit<D, S>[][] splitMap;
 
   private long time;
@@ -54,7 +60,10 @@ public class Scheduler<D, S extends Simple, T extends MPTask<D, S>> {
 
   public Scheduler(int numRowSplits,
     int numColSplits, D[] vWHMap, long time,
-    List<T> tasks) {
+    List<T> tasks, int maxSubmission) {
+
+    MAXSUBMISSION = maxSubmission;
+
     rowCount = new int[numRowSplits];
     this.numRowSplits = numRowSplits;
     numRowLimit = numColSplits;
@@ -66,7 +75,7 @@ public class Scheduler<D, S extends Simple, T extends MPTask<D, S>> {
     freeCol = new int[numColSplits];
     numFreeCols = 0;
     submissionMap =
-      new boolean[numRowSplits][numColSplits];
+      new int[numRowSplits][numColSplits];
     splitMap =
       new RowColSplit[numRowSplits][numColSplits];
     for (int i = 0; i < numRowSplits; i++) {
@@ -108,7 +117,8 @@ public class Scheduler<D, S extends Simple, T extends MPTask<D, S>> {
       RowColSplit<D, S> split =
         splitMap[freeRow[rowIndex]][freeCol[colIndex]];
       // split.cData = hMap[split.col];
-      submissionMap[split.row][split.col] = true;
+      //submissionMap[split.row][split.col] = true;
+      submissionMap[split.row][split.col]--;
       rowCount[split.row]++;
       colCount[split.col]++;
       freeRow[rowIndex] = freeRow[--numFreeRows];
@@ -154,7 +164,8 @@ public class Scheduler<D, S extends Simple, T extends MPTask<D, S>> {
           int selectedColIndex = -1;
           int count = 0;
           for (int i = 0; i < numFreeCols; i++) {
-            if (!submissionMap[freeRowID][freeCol[i]]) {
+            //if (!submissionMap[freeRowID][freeCol[i]]) {
+            if (submissionMap[freeRowID][freeCol[i]] > 0) {
               count++;
               if (count == 1) {
                 selectedColIndex = i;
@@ -168,7 +179,8 @@ public class Scheduler<D, S extends Simple, T extends MPTask<D, S>> {
             RowColSplit<D, S> s =
               splitMap[freeRowID][freeCol[selectedColIndex]];
             // s.cData = hMap[s.col];
-            submissionMap[s.row][s.col] = true;
+            //submissionMap[s.row][s.col] = true;
+            submissionMap[s.row][s.col]--;
             rowCount[s.row]++;
             colCount[s.col]++;
             freeCol[selectedColIndex] =
@@ -183,7 +195,8 @@ public class Scheduler<D, S extends Simple, T extends MPTask<D, S>> {
           int selectedRowIndex = -1;
           int count = 0;
           for (int i = 0; i < numFreeRows; i++) {
-            if (!submissionMap[freeRow[i]][freeColID]) {
+            //if (!submissionMap[freeRow[i]][freeColID]) {
+            if (submissionMap[freeRow[i]][freeColID] > 0) {
               count++;
               if (count == 1) {
                 selectedRowIndex = i;
@@ -197,7 +210,8 @@ public class Scheduler<D, S extends Simple, T extends MPTask<D, S>> {
             RowColSplit<D, S> s =
               splitMap[freeRow[selectedRowIndex]][freeColID];
             // s.cData = hMap[s.col];
-            submissionMap[s.row][s.col] = true;
+            //submissionMap[s.row][s.col] = true;
+            submissionMap[s.row][s.col]--;
             rowCount[s.row]++;
             colCount[s.col]++;
             freeRow[selectedRowIndex] =
@@ -249,9 +263,10 @@ public class Scheduler<D, S extends Simple, T extends MPTask<D, S>> {
     for (int i = 0; i < numRowSplits; i++) {
       for (int j = 0; j < numColSplits; j++) {
         splitMap[i][j].cData = hMap[j];
-        if (submissionMap[i][j]) {
-          submissionMap[i][j] = false;
-        }
+        //if (submissionMap[i][j]) {
+          //submissionMap[i][j] = false;
+          submissionMap[i][j] = MAXSUBMISSION;
+        //}
       }
     }
   }

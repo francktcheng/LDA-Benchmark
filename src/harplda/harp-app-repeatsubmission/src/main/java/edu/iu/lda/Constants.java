@@ -39,6 +39,8 @@ public class Constants {
     50;
   public static final int TRAIN_MIN_THRESHOLD =
     50;
+  public static final String MAX_SUBMISSION = 
+    "max_submission";
   public static final String MAX_BOUND =
     "max_bound";
   public static final String MIN_BOUND =
