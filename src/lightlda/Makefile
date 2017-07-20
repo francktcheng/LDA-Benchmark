@@ -4,6 +4,7 @@ CXX = g++
 CXXFLAGS = -g -O3 \
            -std=c++11 \
            -Wall \
+		   -DVTUNE_PROF \
            -Wno-sign-compare \
            -fno-omit-frame-pointer
 

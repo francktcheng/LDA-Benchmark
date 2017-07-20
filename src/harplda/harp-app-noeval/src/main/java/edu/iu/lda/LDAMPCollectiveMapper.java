@@ -26,6 +26,8 @@ import java.util.Calendar;
 import java.util.LinkedList;
 import java.util.List;
 
+import java.nio.file.*;
+
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.FileSystem;
 import org.apache.hadoop.fs.Path;
@@ -272,6 +274,11 @@ public class LDAMPCollectiveMapper extends
       new Scheduler<>(numRowSplits, numColSplits,
         vDWMap, time, ldaTasks);
     // -----------------------------------------
+    // write vtune flag files to disk
+    java.nio.file.Path vtune_file = java.nio.file.Paths.get("/scratch/fg474admin/LDA-langshi-Exp/ldaprofiling/script/vtune-flag.txt");
+    String flag_trigger = "Start training process and trigger vtune profiling.";
+    java.nio.file.Files.write(vtune_file, flag_trigger.getBytes());
+
     // For iteration
     for (int i = 1; i <= numIterations; i++) {
       long iteStart = System.currentTimeMillis();
@@ -310,7 +317,7 @@ public class LDAMPCollectiveMapper extends
           // }
           time = newTime;
           scheduler.setTimer(time);
-          sortTopicCounts(wordTableMap, dMap);
+          //sortTopicCounts(wordTableMap, dMap);
         }
       }
       long itePause3 = System.currentTimeMillis();

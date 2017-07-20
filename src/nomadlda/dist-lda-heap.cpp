@@ -4,6 +4,13 @@
 #include <sys/time.h>
 #include <time.h>
 
+#ifdef VTUNE_PROF
+// to write trigger file for vtune profiling
+#include <iostream>
+#include <fstream>
+using namespace std;
+#endif
+
 enum {INIT, GO, EVAL, STOP}; // system.status
 
 uint64_t timenow(void)
@@ -1233,6 +1240,14 @@ void dist_lda_CGS(lda_blocks_t &training_set, lda_blocks_t &test_set, dist_lda_p
        //printf("init phase done! %ld tokens\n", total_words); 
        printf("[%s] start training now\n", _str); 
     }
+
+#ifdef VTUNE_PROF
+    //write trigger file to disk and enable vtune
+    ofstream vtune_trigger;
+    vtune_trigger.open("vtune-flag.txt");
+    vtune_trigger << "Start training process and trigger vtune profiling.\n";
+    vtune_trigger.close();
+#endif
 
 	for(auto iter = 0; iter < param.maxiter; iter++) {
         uint64_t _start = timenow();

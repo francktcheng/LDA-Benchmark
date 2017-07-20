@@ -1,7 +1,7 @@
 nodes=(1)
 mh_steps=(4)
 topics=(1000)
-threads=(8)
+threads=($1)
 dataset="enwiki"
 
 curdir=`pwd`
@@ -17,7 +17,7 @@ for thread in ${threads[*]}; do
     export LIGHTLDABIN=lightlda.noeval
     #export MV2_ENABLE_AFFINITY=0
     #$homedir/bin/runlightlda-dist.sh $dataset 10 $topic $node $thread $mh Profiling
-    $homedir/bin/runlightlda.sh $dataset 10 $topic $node $thread $mh Profiling
+    $homedir/bin/runlightlda.sh $dataset $2 $topic $node $thread $mh Profiling
 done
 done
 done

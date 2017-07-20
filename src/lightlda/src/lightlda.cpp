@@ -12,6 +12,13 @@
 #include <multiverso/log.h>
 #include <multiverso/row.h>
 
+#ifdef VTUNE_PROF
+// to write trigger file for vtune profiling
+#include <iostream>
+#include <fstream>
+using namespace std;
+#endif
+
 namespace multiverso { namespace lightlda
 {     
     class LightLDA
@@ -63,6 +70,15 @@ namespace multiverso { namespace lightlda
     private:
         static void Train()
         {
+
+#ifdef VTUNE_PROF
+    //write trigger file to disk and enable vtune
+    ofstream vtune_trigger;
+    vtune_trigger.open("vtune-flag.txt");
+    vtune_trigger << "Start training process and trigger vtune profiling.\n";
+    vtune_trigger.close();
+#endif
+
             Multiverso::BeginTrain();
             for (int32_t i = 0; i < Config::num_iterations; ++i)
             {

@@ -1,6 +1,0 @@
-Bigraph loaded from /scratch/fg474admin/LDA-langshi-Exp/ldaprofiling/data//enwiki/warplda-1/train.bin, 3775554 documents, 1000000 unique tokens, 1107903671 total words
-Initialization finished.
-StartNoeval: K=1000, alpha=0.050000, beta=0.010000, niter=3
-[2017-06-08 17:29:58] Iteration 0, 12.478912 s, 11097759.183140 tokens/thread/sec, 8 threads, log_likelihood (per token) 0.000000, total 0.000000e+00, word_likelihood 0.000000e+00
-[2017-06-08 17:30:10] Iteration 1, 12.683211 s, 10918998.392083 tokens/thread/sec, 8 threads, log_likelihood (per token) 0.000000, total 0.000000e+00, word_likelihood 0.000000e+00
-[2017-06-08 17:30:23] Iteration 2, 12.729132 s, 10879607.467353 tokens/thread/sec, 8 threads, log_likelihood (per token) 0.000000, total 0.000000e+00, word_likelihood 0.000000e+00

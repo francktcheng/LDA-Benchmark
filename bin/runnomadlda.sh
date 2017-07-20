@@ -8,7 +8,8 @@ export LD_LIBRARY_PATH=$HOME/local/mpich2/lib/:$LD_LIBRARY_PATH
 
 bindir=`dirname $0`
 homedir=`dirname $bindir`
-dataroot=$homedir/data/
+# dataroot=$homedir/data/
+dataroot=/share/jproject/fg474/ldapaper/profiling/data/
 nomadldabin=$NOMADLDABIN
 
 host_list=""
@@ -98,7 +99,7 @@ runnomadlda()
 
     export MV2_ENABLE_AFFINITY=0
     #mpiexec -f cluster.ip -n $nodes $bindir/$nomadldabin -T $timeout -k $topic -a $alpha -b $beta -t $iter -n $threads $datadir 2>&1 | tee $logfile
-    mpiexec -n $nodes $bindir/$nomadldabin -T $timeout -k $topic -a $alpha -b $beta -t $iter -n $threads $datadir 2>&1 | tee $logfile
+    mpiexec -f cluster.ip -n $nodes $bindir/$nomadldabin -T $timeout -k $topic -a $alpha -b $beta -t $iter -n $threads $datadir 2>&1 | tee $logfile
 }
 
 #

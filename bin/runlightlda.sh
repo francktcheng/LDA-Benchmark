@@ -29,7 +29,8 @@ init()
             data_cap=8500
             model_cap=5000
             delta_cap=5000
-            alias_cap=800
+            # alias_cap=800
+            alias_cap=512
             ;;
     
         enwiki-8)

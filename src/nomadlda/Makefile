@@ -9,7 +9,7 @@ MPICXX = mpicxx
 
 DEBUGCXXFLAGS = -fPIC -O3 -fopenmp -std=c++11
 #CXXFLAGS = -fPIC -O2 -march=native -DNDEBUG -fopenmp -std=c++11
-CXXFLAGS = -fPIC -O3 -march=native -DNDEBUG -fopenmp -std=c++11
+CXXFLAGS = -fPIC -O3 -march=native -DNDEBUG -DVTUNE_PROF -fopenmp -std=c++11
 
 # TBB related paths
 TBBROOT = tbb
